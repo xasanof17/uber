@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigation } from '@react-navigation/native';
-import { View, Text, TouchableOpacity, FlatList, Image } from "react-native";
+import { View, Text, TouchableOpacity, FlatList, Image, StyleSheet } from "react-native";
 import { Icon } from "react-native-elements";
 import tw from "twrnc";
 
@@ -30,7 +30,7 @@ const NavOptions = () => {
       renderItem={({ item }) => (
         <TouchableOpacity
           onPress={() => navigation.navigate(item.screen)}
-          style={tw`p-2 pl-6 pb-8 bg-gray-200 m-2 w-40`}
+          style={tw`p-2 pl-6 pb-8 bg-gray-200 m-2 w-40 h-60`}
         >
           <View>
             <Image
@@ -52,3 +52,5 @@ const NavOptions = () => {
 };
 
 export default NavOptions;
+
+
